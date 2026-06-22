@@ -13,7 +13,7 @@ class FlightSearch:
             "engine": "google_flights",
             "departure_id": origin_city_code,
             "arrival_id": destination_city_code,
-            "currency": "EUR",
+            "currency": "PLN",
             "outbound_date": from_time.strftime("%Y-%m-%d"),
             "return_date": to_time.strftime("%Y-%m-%d")
         }

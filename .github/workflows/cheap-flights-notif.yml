@@ -1,0 +1,34 @@
+name: Flight Deal Finder
+
+on:
+  schedule:
+    - cron: '0 9 */4 * *'
+  workflow_dispatch:
+
+jobs:
+  find-flights:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run script
+        env:
+          SHEETY_TOKEN: ${{ secrets.SHEETY_TOKEN }}
+          SHEETY_ENDPOINT: ${{ secrets.SHEETY_ENDPOINT }}
+          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+          SERP_ENDPOINT: ${{ secrets.SERP_ENDPOINT }}
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN_TWILIO: ${{ secrets.AUTH_TOKEN_TWILIO }}
+          TWILIO_FROM: ${{ secrets.TWILIO_FROM }}
+          TWILIO_TO: ${{ secrets.TWILIO_TO }}
+        run: python main.py

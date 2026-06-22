@@ -1,0 +1,4 @@
+.env
+.vanv
+test.py
+*.sqlite

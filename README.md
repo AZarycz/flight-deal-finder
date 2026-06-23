@@ -49,4 +49,4 @@ Google Sheet communication is handled via [Sheety](https://sheety.co/).
 
 ## SMS Notification Example
 
-<img width="1080" height="1219" alt="Screenshot_20260623_052431_Messages" src="https://github.com/user-attachments/assets/95b42630-ee2e-42e2-bbef-723358b1c8ab" />
+<img width="500" height="600" alt="Screenshot_20260623_052431_Messages" src="https://github.com/user-attachments/assets/95b42630-ee2e-42e2-bbef-723358b1c8ab" />

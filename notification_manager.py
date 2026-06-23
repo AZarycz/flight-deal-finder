@@ -22,7 +22,7 @@ class NotificationManager:
 
         client = Client(self.account_sid, self.auth_token_twilio)
         message = client.messages.create(
-            body=f"Low price alert! Only {price} euro to fly from {iata_origin} to {iata_destination}, on {from_date} until {to_date}. Book: {short_link}",
+            body=f"Low price alert! Only {price} zlotych to fly from {iata_origin} to {iata_destination}, on {from_date} until {to_date}. Book: {short_link}",
             from_=self.from_number,
             to=self.to_number,
         )
